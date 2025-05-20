@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loberiam Shop - Minha Conta. Gerencie seus dados, pedidos, endereços e preferências.">
+    <title>Minha Conta - Loberiam Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <!-- Barra de anúncios -->
+    <div class="top-announcement-bar">
+        <div class="container">
+            <div class="announcement-slider">
+                <div class="announcement-slide active">
+                    <span>Frete grátis para compras acima de R$ 199,90 - Aproveite!</span>
+                </div>
+                <div class="announcement-slide">
+                    <span>10% OFF na primeira compra com o cupom: BEMVINDO10</span>
+                </div>
+                <div class="announcement-slide">
+                    <span>Parcele em até 12x sem juros em todo o site</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="topo">
+        <div class="container">
+            <div class="topo-flex">
+                <div class="logo-container">
+                    <a href="index.html">
+                        <span class="logo-text">Loberiam Shop</span>
+                    </a>
+                </div>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="O que você está procurando?">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="header-icons">
+                    <a href="conta.html" class="header-icon-link active">
+                        <i class="fas fa-user"></i>
+                        <span>Minha Conta</span>
+                    </a>
+                    <a href="favoritos.html" class="header-icon-link">
+                        <i class="fas fa-heart"></i>
+                        <span>Favoritos</span>
+                    </a>
+                    <a href="carrinho.html" class="header-icon-link">
+                        <div class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">3</span>
+                        </div>
+                        <span>Carrinho</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-flex">
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="produtos.html">Categorias</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="produtos.html?categoria=eletronicos">Eletrônicos</a></li>
+                            <li><a href="produtos.html?categoria=moda">Moda</a></li>
+                            <li><a href="produtos.html?categoria=casa">Casa e Decoração</a></li>
+                            <li><a href="produtos.html?categoria=esportes">Esportes</a></li>
+                            <li><a href="produtos.html?categoria=beleza">Beleza e Saúde</a></li>
+                            <li><a href="produtos.html">Ver todas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="produtos.html?destaque=ofertas">Ofertas</a></li>
+                    <li><a href="produtos.html?destaque=lancamentos">Lançamentos</a></li>
+                    <li><a href="produtos.html?destaque=maisvendidos">Mais Vendidos</a></li>
+                    <li><a href="sobre.html">Quem Somos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                <a href="produtos.html?promocao=true" class="nav-promo-link">SUPER OFERTAS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Breadcrumb -->
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Minha Conta</li>
+            </ol>
+        </div>
+
+        <!-- Página da Conta -->
+        <section class="account-page">
+            <div class="container">
+                <div class="page-title">
+                    <h1>Minha Conta</h1>
+                </div>
+
+                <div class="account-content">
+                    <!-- Menu lateral da conta -->
+                    <div class="account-sidebar">
+                        <div class="account-user">
+                            <div class="account-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="account-info">
+                                <div class="account-name">João Silva</div>
+                                <div class="account-email">joao.silva@email.com</div>
+                            </div>
+                        </div>
+                        <ul class="account-menu">
+                            <li class="account-menu-item active">
+                                <a href="#dashboard" class="account-menu-link" data-tab="dashboard">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#orders" class="account-menu-link" data-tab="orders">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span>Meus Pedidos</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#favorites" class="account-menu-link" data-tab="favorites">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Favoritos</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#addresses" class="account-menu-link" data-tab="addresses">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Endereços</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#payments" class="account-menu-link" data-tab="payments">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Formas de Pagamento</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#profile" class="account-menu-link" data-tab="profile">
+                                    <i class="fas fa-user-edit"></i>
+                                    <span>Dados Pessoais</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#security" class="account-menu-link" data-tab="security">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Segurança</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#notifications" class="account-menu-link" data-tab="notifications">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Notificações</span>
+                                </a>
+                            </li>
+                            <li class="account-menu-item">
+                                <a href="#" class="account-menu-link logout">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Sair</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Conteúdo da conta -->
+                    <div class="account-main">
+                        <!-- Dashboard -->
+                        <div class="account-tab active" id="dashboard">
+                            <div class="account-tab-header">
+                                <h2>Dashboard</h2>
+                                <p>Bem-vindo(a) à sua conta, João!</p>
+                            </div>
+                            <div class="account-dashboard">
+                                <div class="dashboard-cards">
+                                    <div class="dashboard-card">
+                                        <div class="dashboard-card-icon">
+                                            <i class="fas fa-shopping-bag"></i>
+                                        </div>
+                                        <div class="dashboard-card-content">
+                                            <div class="dashboard-card-title">Pedidos</div>
+                                            <div class="dashboard-card-value">5</div>
+                                        </div>
+                                        <a href="#orders" class="dashboard-card-link" data-tab="orders">Ver pedidos</a>
+                                    </div>
+                                    <div class="dashboard-card">
+                                        <div class="dashboard-card-icon">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="dashboard-card-content">
+                                            <div class="dashboard-card-title">Favoritos</div>
+                                            <div class="dashboard-card-value">12</div>
+                                        </div>
+                                        <a href="#favorites" class="dashboard-card-link" data-tab="favorites">Ver favoritos</a>
+                                    </div>
+                                    <div class="dashboard-card">
+                                        <div class="dashboard-card-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="dashboard-card-content">
+                                            <div class="dashboard-card-title">Endereços</div>
+                                            <div class="dashboard-card-value">2</div>
+                                        </div>
+                                        <a href="#addresses" class="dashboard-card-link" data-tab="addresses">Ver endereços</a>
+                                    </div>
+                                    <div class="dashboard-card">
+                                        <div class="dashboard-card-icon">
+                                            <i class="fas fa-credit-card"></i>
+                                        </div>
+                                        <div class="dashboard-card-content">
+                                            <div class="dashboard-card-title">Cartões</div>
+                                            <div class="dashboard-card-value">3</div>
+                                        </div>
+                                        <a href="#payments" class="dashboard-card-link" data-tab="payments">Ver cartões</a>
+                                    </div>
+                                </div>
+
+                                <div class="dashboard-sections">
+                                    <div class="dashboard-section">
+                                        <div class="dashboard-section-header">
+                                            <h3>Últimos Pedidos</h3>
+                                            <a href="#orders" class="dashboard-section-link" data-tab="orders">Ver todos</a>
+                                        </div>
+                                        <div class="dashboard-section-content">
+                                            <div class="order-item">
+                                                <div class="order-item-header">
+                                                    <div class="order-number">Pedido #12345</div>
+                                                    <div class="order-date">15/05/2025</div>
+                                                </div>
+                                                <div class="order-item-content">
+                                                    <div class="order-status status-delivered">
+                                                        <i class="fas fa-check-circle"></i>
+                                                        <span>Entregue</span>
+                                                    </div>
+                                                    <div class="order-products">3 produtos</div>
+                                                    <div class="order-total">R$ 3.114,60</div>
+                                                </div>
+                                                <div class="order-item-actions">
+                                                    <a href="#" class="btn btn-sm btn-outline">Detalhes</a>
+                                                    <a href="#" class="btn btn-sm btn-primary">Comprar Novamente</a>
+                                                </div>
+                                            </div>
+                                            <div class="order-item">
+                                                <div class="order-item-header">
+                                                    <div class="order-number">Pedido #12344</div>
+                                                    <div class="order-date">02/05/2025</div>
+                                                </div>
+                                                <div class="order-item-content">
+                                                    <div class="order-status status-delivered">
+                                                        <i class="fas fa-check-circle"></i>
+                                                        <span>Entregue</span>
+                                                    </div>
+                                                    <div class="order-products">1 produto</div>
+                                                    <div class="order-total">R$ 1.999,90</div>
+                                                </div>
+                                                <div class="order-item-actions">
+                                                    <a href="#" class="btn btn-sm btn-outline">Detalhes</a>
+                                                    <a href="#" class="btn btn-sm btn-primary">Comprar Novamente</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="dashboard-section">
+                                        <div class="dashboard-section-header">
+                                            <h3>Produtos Favoritos</h3>
+                                            <a href="#favorites" class="dashboard-section-link" data-tab="favorites">Ver todos</a>
+                                        </div>
+                                        <div class="dashboard-section-content">
+                                            <div class="favorites-grid">
+                                                <div class="product-card-small">
+                                                    <div class="product-image">
+                                                        <img src="https://via.placeholder.com/150/f8f9fa/343a40?text=Produto+1" alt="Smartphone Avançado">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <h3 class="product-title-small">Smartphone Avançado</h3>
+                                                        <div class="product-price">
+                                                            <div class="price-current">R$ 1.999,90</div>
+                                                        </div>
+                                                        <button class="btn btn-sm btn-primary">Adicionar</button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-card-small">
+                                                    <div class="product-image">
+                                                        <img src="https://via.placeholder.com/150/f8f9fa/343a40?text=Produto+2" alt="Notebook Ultrafino">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <h3 class="product-title-small">Notebook Ultrafino</h3>
+                                                        <div class="product-price">
+                                                            <div class="price-current">R$ 3.999,90</div>
+                                                        </div>
+                                                        <button class="btn btn-sm btn-primary">Adicionar</button>
+                                                    </div>
+                                                </div>
+                                                <div class="product-card-small">
+                                                    <div class="product-image">
+                                                        <img src="https://via.placeholder.com/150/f8f9fa/343a40?text=Produto+3" alt="Fone de Ouvido Bluetooth">
+                                                    </div>
+                                                    <div class="product-info">
+                                                        <h3 class="product-title-small">Fone de Ouvido Bluetooth</h3>
+                                                        <div class="product-price">
+                                                            <div class="price-current">R$ 419,90</div>
+                                                        </div>
+                                                        <button class="btn btn-sm btn-primary">Adicionar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Meus Pedidos -->
+                        <div class="account-tab" id="orders">
+                            <div class="account-tab-header">
+                                <h2>Meus Pedidos</h2>
+                                <p>Acompanhe e gerencie seus pedidos</p>
+                            </div>
+                            <div class="orders-filter">
+                                <div class="filter-group">
+                                    <label for="order-period">Período:</label>
+                                    <select id="order-period" class="form-control">
+                                        <option value="all">Todos</option>
+                                        <option value="30days">Últimos 30 dias</option>
+                                        <option value="6months">Últimos 6 meses</option>
+                                        <option value="year">Último ano</option>
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <label for="order-status">Status:</label>
+                                    <select id="order-status" class="form-control">
+                                        <option value="all">Todos</option>
+                                        <option value="processing">Em processamento</option>
+                                        <option value="shipped">Enviado</option>
+                                        <option value="delivered">Entregue</option>
+                                        <option value="canceled">Cancelado</option>
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <button class="btn btn-primary btn-filter">Filtrar</button>
+                                </div>
+                            </div>
+                            <div class="orders-list">
+                                <div class="order-item">
+                                    <div class="order-item-header">
+                                        <div class="order-number">Pedido #12345</div>
+                                        <div class="order-date">15/05/2025</div>
+                                    </div>
+                                    <div class="order-item-content">
+                                        <div class="order-status status-delivered">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Entregue</span>
+                                        </div>
+                                        <div class="order-products">3 produtos</div>
+                                        <div class="order-total">R$ 3.114,60</div>
+                                    </div>
+                                    <div class="order-item-actions">
+                                        <a href="#" class="btn btn-sm btn-outline">Detalhes</a>
+                                        <a href="#" class="btn btn-sm btn-primary">Comprar Novamente</a>
+                                    </div>
+                                </div>
+                                <div class="order-item">
+                                    <div class="order-item-header">
+                                        <div class="order-number">Pedido #12344</div>
+                                        <div class="order-date">02/05/2025</div>
+                                    </div>
+                                    <div class="order-item-content">
+                                        <div class="order-status status-delivered">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Entregue</span>
+                                        </div>
+                                        <div class="order-products">1 produto</div>
+                                        <div class="order-total">R$ 1.999,90</div>
+                                    </div>
+                                    <div class="order-item-actions">
+                                        <a href="#" class="btn btn-sm btn-outline">Detalhes</a>
+                                        <a href="#" class="btn btn-sm btn-primary">Comprar Novamente</a>
+                                    </div>
+                                </div>
+                                <div class="order-item">
+                                    <div class="order-item-header">
+                                        <div class="order-number">Pedido #12343</div>
+                                        <div class="order-date">18/04/2025</div>
+                                    </div>
+                                    <div class="order-item-content">
+                                        <div class="order-status status-shipped">
+                                            <i class="fas fa-truck"></i>
+                                            <span>Enviado</span>
+                                        </div>
+                                        <div class="order-products">2 produtos</div>
+                                        <div class="order-total">R$ 899,80</div>
+                                    </div>
+                                    <div class="order-item-actions">
+                                        <a href="#" class="btn btn-sm btn-outline">Detalhes</a>
+                                        <a href="#" class="btn btn-sm btn-outline">Rastrear</a>
+                                    </div>
+                                </div>
+                                <div class="order-item">
+                                    <div class="order-item-header">
+                                        <div class="order-number">Pedido #12342</div>
+                                        <div class="order-date">05/04/2025</div>
+                                    </div>
+                                    <div class="order-item-content">
+                                        <div class="order-status status-processing">
+                                            <i class="fas fa-clock"></i>
+                                            <span>Em processamento</span>
+                                        </div>
+                                        <div class="order-products">1 produto</div>
+                                        <div class="order-total">R$ 674,90</div>
+                                    </div>
+                                    <div class="order-item-actions">
+                                        <a href="#" class="btn btn-sm btn-outline">Detalhes</a>
+                                        <a href="#" class="btn btn-sm btn-outline btn-cancel">Cancelar</a>
+                                    </div>
+                                </div>
+                                <div class="order-item">
+                                    <div class="order-item-header">
+                                        <div class="order-number">Pedido #12341</div>
+                                        <div class="order-date">20/03/2025</div>
+                                    </div>
+                                    <div class="order-item-content">
+                                        <div class="order-status status-canceled">
+                                            <i class="fas fa-times-circle"></i>
+                                            <span>Cancelado</span>
+                                        </div>
+                                        <div class="order-products">1 produto</div>
+                                        <div class="order-total">R$ 459,90</div>
+                                    </div>
+                                    <div class="order-item-actions">
+                                        <a href="#" class="btn btn-sm btn-outline">Detalhes</a>
+                                        <a href="#" class="btn btn-sm btn-primary">Comprar Novamente</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination-container">
+                                <ul class="pagination">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Anterior">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Próximo">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Favoritos -->
+                        <div class="account-tab" id="favorites">
+                            <div class="account-tab-header">
+                                <h2>Favoritos</h2>
+                                <p>Seus produtos favoritos</p>
+                            </div>
+                            <div class="favorites-content">
+                                <div class="products-grid">
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="https://via.placeholder.com/300/f8f9fa/343a40?text=Produto+1" alt="Smartphone Avançado">
+                                            <div class="product-badge badge-sale">-20%</div>
+                                            <button class="btn-remove-favorite">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="product-category">Eletrônicos</div>
+                                            <h3 class="product-title">Smartphone Avançado com Câmera Profissional</h3>
+                                            <div class="product-rating">
+                                                <div class="rating-stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <div class="rating-count">(128)</div>
+                                            </div>
+                                            <div class="product-price">
+                                                <div class="price-old">R$ 2.499,90</div>
+                                                <div class="price-current">R$ 1.999,90</div>
+                                            </div>
+                                            <div class="product-actions">
+                                                <a href="produto_exemplo.html" class="btn btn-outline btn-sm">Ver Produto</a>
+                                                <button class="btn btn-primary btn-sm">Adicionar ao Carrinho</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="https://via.placeholder.com/300/f8f9fa/343a40?text=Produto+2" alt="Notebook Ultrafino">
+                                            <div class="product-badge badge-sale">-15%</div>
+                                            <button class="btn-remove-favorite">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="product-category">Eletrônicos</div>
+                                            <h3 class="product-title">Notebook Ultrafino com Processador de Alta Performance</h3>
+                                            <div class="product-rating">
+                                                <div class="rating-stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                                <div class="rating-count">(95)</div>
+                                            </div>
+                                            <div class="product-price">
+                                                <div class="price-old">R$ 4.699,90</div>
+                                                <div class="price-current">R$ 3.999,90</div>
+                                            </div>
+                                            <div class="product-actions">
+                                                <a href="produto_exemplo.html" class="btn btn-outline btn-sm">Ver Produto</a>
+                                                <button class="btn btn-primary btn-sm">Adicionar ao Carrinho</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="https://via.placeholder.com/300/f8f9fa/343a40?text=Produto+3" alt="Fone de Ouvido Bluetooth">
+                                            <div class="product-badge badge-sale">-30%</div>
+                                            <button class="btn-remove-favorite">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="product-category">Eletrônicos</div>
+                                            <h3 class="product-title">Fone de Ouvido Bluetooth com Cancelamento de Ruído</h3>
+                                            <div class="product-rating">
+                                                <div class="rating-stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="rating-count">(210)</div>
+                                            </div>
+                                            <div class="product-price">
+                                                <div class="price-old">R$ 599,90</div>
+                                                <div class="price-current">R$ 419,90</div>
+                                            </div>
+                                            <div class="product-actions">
+                                                <a href="produto_exemplo.html" class="btn btn-outline btn-sm">Ver Produto</a>
+                                                <button class="btn btn-primary btn-sm">Adicionar ao Carrinho</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="https://via.placeholder.com/300/f8f9fa/343a40?text=Produto+4" alt="Smartwatch Esportivo">
+                                            <div class="product-badge badge-sale">-25%</div>
+                                            <button class="btn-remove-favorite">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="product-category">Eletrônicos</div>
+                                            <h3 class="product-title">Smartwatch Esportivo com Monitor Cardíaco</h3>
+                                            <div class="product-rating">
+                                                <div class="rating-stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                                <div class="rating-count">(87)</div>
+                                            </div>
+                                            <div class="product-price">
+                                                <div class="price-old">R$ 899,90</div>
+                                                <div class="price-current">R$ 674,90</div>
+                                            </div>
+                                            <div class="product-actions">
+                                                <a href="produto_exemplo.html" class="btn btn-outline btn-sm">Ver Produto</a>
+                                                <button class="btn btn-primary btn-sm">Adicionar ao Carrinho</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Endereços -->
+                        <div class="account-tab" id="addresses">
+                            <div class="account-tab-header">
+                                <h2>Endereços</h2>
+                                <p>Gerencie seus endereços de entrega</p>
+                            </div>
+                            <div class="addresses-content">
+                                <div class="addresses-actions">
+                                    <button class="btn btn-primary btn-add-address">
+                                        <i class="fas fa-plus"></i> Adicionar Novo Endereço
+                                    </button>
+                                </div>
+                                <div class="addresses-grid">
+                                    <div class="address-card">
+                                        <div class="address-card-header">
+                                            <div class="address-card-title">Casa</div>
+                                            <div class="address-card-default">Principal</div>
+                                        </div>
+                                        <div class="address-card-content">
+                                            <div class="address-card-name">João Silva</div>
+                                            <div class="address-card-address">Rua das Flores, 123 - Apto 101</div>
+                                            <div class="address-card-neighborhood">Jardim Primavera</div>
+                                            <div class="address-card-city-state">São Paulo - SP</div>
+                                            <div class="address-card-zipcode">CEP: 01234-567</div>
+                                            <div class="address-card-phone">(11) 98765-4321</div>
+                                        </div>
+                                        <div class="address-card-actions">
+                                            <button class="btn btn-sm btn-outline">Editar</button>
+                                            <button class="btn btn-sm btn-outline btn-remove">Remover</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="address-card">
+                                        <div class="address-card-header">
+                                            <div class="address-card-title">Trabalho</div>
+                                        </div>
+                                        <div class="address-card-content">
+                                            <div class="address-card-name">João Silva</div>
+                                            <div class="address-card-address">Av. Paulista, 1000 - Sala 1010</div>
+                                            <div class="address-card-neighborhood">Bela Vista</div>
+                                            <div class="address-card-city-state">São Paulo - SP</div>
+                                            <div class="address-card-zipcode">CEP: 01310-100</div>
+                                            <div class="address-card-phone">(11) 3456-7890</div>
+                                        </div>
+                                        <div class="address-card-actions">
+                                            <button class="btn btn-sm btn-outline">Editar</button>
+                                            <button class="btn btn-sm btn-outline btn-remove">Remover</button>
+                                            <button class="btn btn-sm btn-primary">Definir como Principal</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Formulário de endereço (inicialmente oculto) -->
+                                <div class="address-form hidden">
+                                    <div class="form-header">
+                                        <h3>Adicionar Novo Endereço</h3>
+                                    </div>
+                                    <div class="form-content">
+                                        <div class="form-row">
+                                            <div class="form-group col-4">
+                                                <label for="address-zipcode">CEP</label>
+                                                <div class="zipcode-input">
+                                                    <input type="text" id="address-zipcode" class="form-control" placeholder="00000-000">
+                                                    <button type="button" class="zipcode-search">Buscar</button>
+                                                </div>
+                                                <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank" class="zipcode-link">Não sei meu CEP</a>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="address-street">Endereço</label>
+                                                <input type="text" id="address-street" class="form-control" placeholder="Rua, Avenida, etc.">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-4">
+                                                <label for="address-number">Número</label>
+                                                <input type="text" id="address-number" class="form-control" placeholder="Número">
+                                            </div>
+                                            <div class="form-group col-8">
+                                                <label for="address-complement">Complemento</label>
+                                                <input type="text" id="address-complement" class="form-control" placeholder="Apto, Bloco, etc. (opcional)">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="address-neighborhood">Bairro</label>
+                                                <input type="text" id="address-neighborhood" class="form-control" placeholder="Bairro">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-8">
+                                                <label for="address-city">Cidade</label>
+                                                <input type="text" id="address-city" class="form-control" placeholder="Cidade">
+                                            </div>
+                                            <div class="form-group col-4">
+                                                <label for="address-state">Estado</label>
+                                                <select id="address-state" class="form-control">
+                                                    <option value="">Selecione</option>
+                                                    <option value="AC">AC</option>
+                                                    <option value="AL">AL</option>
+                                                    <option value="AP">AP</option>
+                                                    <option value="AM">AM</option>
+                                                    <option value="BA">BA</option>
+                                                    <option value="CE">CE</option>
+                                                    <option value="DF">DF</option>
+                                                    <option value="ES">ES</option>
+                                                    <option value="GO">GO</option>
+                                                    <option value="MA">MA</option>
+                                                    <option value="MT">MT</option>
+                                                    <option value="MS">MS</option>
+                                                    <option value="MG">MG</option>
+                                                    <option value="PA">PA</option>
+                                                    <option value="PB">PB</option>
+                                                    <option value="PR">PR</option>
+                                                    <option value="PE">PE</option>
+                                                    <option value="PI">PI</option>
+                                                    <option value="RJ">RJ</option>
+                                                    <option value="RN">RN</option>
+                                                    <option value="RS">RS</option>
+                                                    <option value="RO">RO</option>
+                                                    <option value="RR">RR</option>
+                                                    <option value="SC">SC</option>
+                                                    <option value="SP">SP</option>
+                                                    <option value="SE">SE</option>
+                                                    <option value="TO">TO</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="address-reference">Ponto de referência</label>
+                                                <input type="text" id="address-reference" class="form-control" placeholder="Ponto de referência (opcional)">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="address-name">Nome do endereço</label>
+                                                <input type="text" id="address-name" class="form-control" placeholder="Ex: Casa, Trabalho, etc.">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-check">
+                                                <input type="checkbox" id="address-default" class="form-check-input">
+                                                <label for="address-default" class="form-check-label">Definir como endereço principal</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="button" class="btn btn-primary">Salvar Endereço</button>
+                                        <button type="button" class="btn btn-outline btn-cancel">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Formas de Pagamento -->
+                        <div class="account-tab" id="payments">
+                            <div class="account-tab-header">
+                                <h2>Formas de Pagamento</h2>
+                                <p>Gerencie seus cartões e formas de pagamento</p>
+                            </div>
+                            <div class="payments-content">
+                                <div class="payments-actions">
+                                    <button class="btn btn-primary btn-add-card">
+                                        <i class="fas fa-plus"></i> Adicionar Novo Cartão
+                                    </button>
+                                </div>
+                                <div class="cards-grid">
+                                    <div class="card-item">
+                                        <div class="card-item-header">
+                                            <div class="card-item-type">
+                                                <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Visa" alt="Visa" class="card-brand">
+                                            </div>
+                                            <div class="card-item-default">Principal</div>
+                                        </div>
+                                        <div class="card-item-content">
+                                            <div class="card-item-number">**** **** **** 1234</div>
+                                            <div class="card-item-name">João Silva</div>
+                                            <div class="card-item-expiry">Validade: 12/2028</div>
+                                        </div>
+                                        <div class="card-item-actions">
+                                            <button class="btn btn-sm btn-outline">Editar</button>
+                                            <button class="btn btn-sm btn-outline btn-remove">Remover</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-item">
+                                        <div class="card-item-header">
+                                            <div class="card-item-type">
+                                                <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Master" alt="Mastercard" class="card-brand">
+                                            </div>
+                                        </div>
+                                        <div class="card-item-content">
+                                            <div class="card-item-number">**** **** **** 5678</div>
+                                            <div class="card-item-name">João Silva</div>
+                                            <div class="card-item-expiry">Validade: 08/2027</div>
+                                        </div>
+                                        <div class="card-item-actions">
+                                            <button class="btn btn-sm btn-outline">Editar</button>
+                                            <button class="btn btn-sm btn-outline btn-remove">Remover</button>
+                                            <button class="btn btn-sm btn-primary">Definir como Principal</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-item">
+                                        <div class="card-item-header">
+                                            <div class="card-item-type">
+                                                <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Amex" alt="American Express" class="card-brand">
+                                            </div>
+                                        </div>
+                                        <div class="card-item-content">
+                                            <div class="card-item-number">**** **** **** 9012</div>
+                                            <div class="card-item-name">João Silva</div>
+                                            <div class="card-item-expiry">Validade: 03/2026</div>
+                                        </div>
+                                        <div class="card-item-actions">
+                                            <button class="btn btn-sm btn-outline">Editar</button>
+                                            <button class="btn btn-sm btn-outline btn-remove">Remover</button>
+                                            <button class="btn btn-sm btn-primary">Definir como Principal</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Formulário de cartão (inicialmente oculto) -->
+                                <div class="card-form hidden">
+                                    <div class="form-header">
+                                        <h3>Adicionar Novo Cartão</h3>
+                                    </div>
+                                    <div class="form-content">
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="card-number">Número do Cartão</label>
+                                                <input type="text" id="card-number" class="form-control" placeholder="0000 0000 0000 0000">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="card-name">Nome no Cartão</label>
+                                                <input type="text" id="card-name" class="form-control" placeholder="Nome como está no cartão">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-6">
+                                                <label for="card-expiry">Validade</label>
+                                                <input type="text" id="card-expiry" class="form-control" placeholder="MM/AA">
+                                            </div>
+                                            <div class="form-group col-6">
+                                                <label for="card-cvv">CVV</label>
+                                                <input type="text" id="card-cvv" class="form-control" placeholder="123">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-check">
+                                                <input type="checkbox" id="card-default" class="form-check-input">
+                                                <label for="card-default" class="form-check-label">Definir como cartão principal</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="button" class="btn btn-primary">Salvar Cartão</button>
+                                        <button type="button" class="btn btn-outline btn-cancel">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dados Pessoais -->
+                        <div class="account-tab" id="profile">
+                            <div class="account-tab-header">
+                                <h2>Dados Pessoais</h2>
+                                <p>Gerencie suas informações pessoais</p>
+                            </div>
+                            <div class="profile-content">
+                                <form class="profile-form">
+                                    <div class="form-section">
+                                        <h3>Informações Básicas</h3>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="profile-name">Nome Completo</label>
+                                                <input type="text" id="profile-name" class="form-control" value="João Silva">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-6">
+                                                <label for="profile-cpf">CPF</label>
+                                                <input type="text" id="profile-cpf" class="form-control" value="123.456.789-00" disabled>
+                                            </div>
+                                            <div class="form-group col-6">
+                                                <label for="profile-birth">Data de Nascimento</label>
+                                                <input type="date" id="profile-birth" class="form-control" value="1990-05-15">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label>Gênero</label>
+                                                <div class="form-check-inline">
+                                                    <input type="radio" id="gender-male" name="gender" class="form-check-input" checked>
+                                                    <label for="gender-male" class="form-check-label">Masculino</label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input type="radio" id="gender-female" name="gender" class="form-check-input">
+                                                    <label for="gender-female" class="form-check-label">Feminino</label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input type="radio" id="gender-other" name="gender" class="form-check-input">
+                                                    <label for="gender-other" class="form-check-label">Outro</label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input type="radio" id="gender-none" name="gender" class="form-check-input">
+                                                    <label for="gender-none" class="form-check-label">Prefiro não informar</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-section">
+                                        <h3>Contato</h3>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="profile-email">E-mail</label>
+                                                <input type="email" id="profile-email" class="form-control" value="joao.silva@email.com">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-6">
+                                                <label for="profile-phone">Telefone Celular</label>
+                                                <input type="text" id="profile-phone" class="form-control" value="(11) 98765-4321">
+                                            </div>
+                                            <div class="form-group col-6">
+                                                <label for="profile-phone-alt">Telefone Alternativo</label>
+                                                <input type="text" id="profile-phone-alt" class="form-control" value="(11) 3456-7890">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-actions">
+                                        <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Segurança -->
+                        <div class="account-tab" id="security">
+                            <div class="account-tab-header">
+                                <h2>Segurança</h2>
+                                <p>Gerencie sua senha e configurações de segurança</p>
+                            </div>
+                            <div class="security-content">
+                                <div class="form-section">
+                                    <h3>Alterar Senha</h3>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="current-password">Senha Atual</label>
+                                            <div class="password-input">
+                                                <input type="password" id="current-password" class="form-control" placeholder="Digite sua senha atual">
+                                                <button type="button" class="password-toggle">
+                                                    <i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="new-password">Nova Senha</label>
+                                            <div class="password-input">
+                                                <input type="password" id="new-password" class="form-control" placeholder="Digite sua nova senha">
+                                                <button type="button" class="password-toggle">
+                                                    <i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="password-strength">
+                                                <div class="strength-meter">
+                                                    <div class="strength-segment"></div>
+                                                    <div class="strength-segment"></div>
+                                                    <div class="strength-segment"></div>
+                                                    <div class="strength-segment"></div>
+                                                </div>
+                                                <div class="strength-text">Força da senha: <span>Fraca</span></div>
+                                            </div>
+                                            <div class="password-requirements">
+                                                <div class="requirement">
+                                                    <i class="fas fa-times-circle"></i>
+                                                    <span>Mínimo de 8 caracteres</span>
+                                                </div>
+                                                <div class="requirement">
+                                                    <i class="fas fa-times-circle"></i>
+                                                    <span>Pelo menos uma letra maiúscula</span>
+                                                </div>
+                                                <div class="requirement">
+                                                    <i class="fas fa-times-circle"></i>
+                                                    <span>Pelo menos um número</span>
+                                                </div>
+                                                <div class="requirement">
+                                                    <i class="fas fa-times-circle"></i>
+                                                    <span>Pelo menos um caractere especial</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="confirm-password">Confirmar Nova Senha</label>
+                                            <div class="password-input">
+                                                <input type="password" id="confirm-password" class="form-control" placeholder="Confirme sua nova senha">
+                                                <button type="button" class="password-toggle">
+                                                    <i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="button" class="btn btn-primary">Alterar Senha</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h3>Verificação em Duas Etapas</h3>
+                                    <div class="two-factor-status">
+                                        <div class="status-icon">
+                                            <i class="fas fa-toggle-off"></i>
+                                        </div>
+                                        <div class="status-text">
+                                            <div class="status-title">Desativada</div>
+                                            <div class="status-description">A verificação em duas etapas adiciona uma camada extra de segurança à sua conta.</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="button" class="btn btn-primary">Ativar Verificação em Duas Etapas</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h3>Sessões Ativas</h3>
+                                    <div class="sessions-list">
+                                        <div class="session-item">
+                                            <div class="session-device">
+                                                <i class="fas fa-laptop"></i>
+                                                <span>Windows - Chrome</span>
+                                            </div>
+                                            <div class="session-info">
+                                                <div class="session-location">São Paulo, Brasil</div>
+                                                <div class="session-time">Atual</div>
+                                            </div>
+                                            <div class="session-actions">
+                                                <span class="session-current">Sessão Atual</span>
+                                            </div>
+                                        </div>
+                                        <div class="session-item">
+                                            <div class="session-device">
+                                                <i class="fas fa-mobile-alt"></i>
+                                                <span>Android - App</span>
+                                            </div>
+                                            <div class="session-info">
+                                                <div class="session-location">São Paulo, Brasil</div>
+                                                <div class="session-time">Há 2 horas</div>
+                                            </div>
+                                            <div class="session-actions">
+                                                <button class="btn btn-sm btn-outline btn-terminate">Encerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="button" class="btn btn-outline btn-terminate-all">Encerrar Todas as Outras Sessões</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notificações -->
+                        <div class="account-tab" id="notifications">
+                            <div class="account-tab-header">
+                                <h2>Notificações</h2>
+                                <p>Gerencie suas preferências de notificação</p>
+                            </div>
+                            <div class="notifications-content">
+                                <div class="form-section">
+                                    <h3>E-mail</h3>
+                                    <div class="notification-option">
+                                        <div class="notification-info">
+                                            <div class="notification-title">Ofertas e promoções</div>
+                                            <div class="notification-description">Receba e-mails sobre ofertas especiais, descontos e promoções.</div>
+                                        </div>
+                                        <div class="notification-toggle">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="notification-option">
+                                        <div class="notification-info">
+                                            <div class="notification-title">Atualizações de pedidos</div>
+                                            <div class="notification-description">Receba e-mails sobre o status dos seus pedidos.</div>
+                                        </div>
+                                        <div class="notification-toggle">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="notification-option">
+                                        <div class="notification-info">
+                                            <div class="notification-title">Novidades e lançamentos</div>
+                                            <div class="notification-description">Receba e-mails sobre novos produtos e lançamentos.</div>
+                                        </div>
+                                        <div class="notification-toggle">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="notification-option">
+                                        <div class="notification-info">
+                                            <div class="notification-title">Pesquisas de satisfação</div>
+                                            <div class="notification-description">Receba e-mails para avaliar sua experiência de compra.</div>
+                                        </div>
+                                        <div class="notification-toggle">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h3>SMS</h3>
+                                    <div class="notification-option">
+                                        <div class="notification-info">
+                                            <div class="notification-title">Atualizações de pedidos</div>
+                                            <div class="notification-description">Receba SMS sobre o status dos seus pedidos.</div>
+                                        </div>
+                                        <div class="notification-toggle">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="notification-option">
+                                        <div class="notification-info">
+                                            <div class="notification-title">Ofertas exclusivas</div>
+                                            <div class="notification-description">Receba SMS sobre ofertas exclusivas e de tempo limitado.</div>
+                                        </div>
+                                        <div class="notification-toggle">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h3>Aplicativo</h3>
+                                    <div class="notification-option">
+                                        <div class="notification-info">
+                                            <div class="notification-title">Notificações push</div>
+                                            <div class="notification-description">Receba notificações push no aplicativo.</div>
+                                        </div>
+                                        <div class="notification-toggle">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-primary">Salvar Preferências</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Institucional</h4>
+                    <div class="footer-links">
+                        <a href="sobre.html">Quem Somos</a>
+                        <a href="politicas.html">Termos e Condições</a>
+                        <a href="politicas.html">Política de Privacidade</a>
+                        <a href="politicas.html">Política de Cookies</a>
+                        <a href="politicas.html">Política de Trocas</a>
+                        <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Atendimento</h4>
+                    <div class="footer-links">
+                        <a href="contato.html">Fale Conosco</a>
+                        <a href="ajuda.html">Central de Ajuda</a>
+                        <a href="ajuda.html">Dúvidas Frequentes</a>
+                        <a href="ajuda.html">Prazos de Entrega</a>
+                        <a href="ajuda.html">Formas de Pagamento</a>
+                        <a href="ajuda.html">Como Comprar</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Minha Conta</h4>
+                    <div class="footer-links">
+                        <a href="conta.html">Meus Pedidos</a>
+                        <a href="favoritos.html">Meus Favoritos</a>
+                        <a href="conta.html">Meus Dados</a>
+                        <a href="conta.html">Meus Endereços</a>
+                        <a href="conta.html">Meus Cartões</a>
+                        <a href="conta.html">Sair</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(11) 4000-1234</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@loberiam.com.br</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Av. Paulista, 1000 - São Paulo/SP</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Seg a Sex: 9h às 18h</span>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Baixe nosso App</h4>
+                    <p>Compre pelo celular e acompanhe seus pedidos em tempo real.</p>
+                    <div class="app-buttons">
+                        <a href="#"><img src="https://via.placeholder.com/120x40/f8f9fa/343a40?text=App+Store" alt="App Store"></a>
+                        <a href="#"><img src="https://via.placeholder.com/120x40/f8f9fa/343a40?text=Google+Play" alt="Google Play"></a>
+                    </div>
+                    <h4 class="mt-4">Formas de Pagamento</h4>
+                    <div class="payment-methods">
+                        <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Visa" alt="Visa" class="payment-icon">
+                        <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Master" alt="Mastercard" class="payment-icon">
+                        <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Amex" alt="American Express" class="payment-icon">
+                        <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Elo" alt="Elo" class="payment-icon">
+                        <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Pix" alt="Pix" class="payment-icon">
+                        <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Boleto" alt="Boleto" class="payment-icon">
+                    </div>
+                    <h4 class="mt-4">Segurança</h4>
+                    <div class="security-seals">
+                        <img src="https://via.placeholder.com/60x30/ffffff/343a40?text=SSL" alt="SSL" class="security-seal">
+                        <img src="https://via.placeholder.com/60x30/ffffff/343a40?text=Seguro" alt="Site Seguro" class="security-seal">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2025 Loberiam Shop - Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Carrossel de anúncios
+        const announcementSlides = document.querySelectorAll('.announcement-slide');
+        let currentAnnouncementSlide = 0;
+
+        function showNextAnnouncementSlide() {
+            announcementSlides[currentAnnouncementSlide].classList.remove('active');
+            currentAnnouncementSlide = (currentAnnouncementSlide + 1) % announcementSlides.length;
+            announcementSlides[currentAnnouncementSlide].classList.add('active');
+        }
+
+        setInterval(showNextAnnouncementSlide, 5000);
+
+        // Navegação entre abas da conta
+        const accountMenuLinks = document.querySelectorAll('.account-menu-link');
+        const accountTabs = document.querySelectorAll('.account-tab');
+        const dashboardLinks = document.querySelectorAll('.dashboard-card-link, .dashboard-section-link');
+
+        // Função para ativar uma aba
+        function activateTab(tabId) {
+            // Remover classe active de todos os links e abas
+            accountMenuLinks.forEach(link => {
+                if (!link.classList.contains('logout')) {
+                    link.classList.remove('active');
+                }
+            });
+            accountTabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Adicionar classe active ao link e aba correspondentes
+            const activeLink = document.querySelector(`.account-menu-link[data-tab="${tabId}"]`);
+            const activeTab = document.getElementById(tabId);
+            
+            if (activeLink && activeTab) {
+                activeLink.classList.add('active');
+                activeTab.classList.add('active');
+                
+                // Atualizar URL com hash
+                window.location.hash = tabId;
+            }
+        }
+
+        // Adicionar evento de clique aos links do menu
+        accountMenuLinks.forEach(link => {
+            if (!link.classList.contains('logout')) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tabId = this.getAttribute('data-tab');
+                    activateTab(tabId);
+                });
+            }
+        });
+
+        // Adicionar evento de clique aos links do dashboard
+        dashboardLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const tabId = this.getAttribute('data-tab');
+                activateTab(tabId);
+            });
+        });
+
+        // Verificar hash na URL ao carregar a página
+        window.addEventListener('load', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash && document.getElementById(hash)) {
+                activateTab(hash);
+            }
+        });
+
+        // Botão de logout
+        const logoutButton = document.querySelector('.account-menu-link.logout');
+        logoutButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Simulação de logout
+            showToast('Logout realizado com sucesso!', 'success');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 2000);
+        });
+
+        // Botões de adicionar endereço
+        const addAddressBtn = document.querySelector('.btn-add-address');
+        const addressForm = document.querySelector('.address-form');
+        const cancelAddressBtn = document.querySelector('.address-form .btn-cancel');
+
+        if (addAddressBtn && addressForm) {
+            addAddressBtn.addEventListener('click', function() {
+                addressForm.classList.remove('hidden');
+                this.classList.add('hidden');
+            });
+
+            if (cancelAddressBtn) {
+                cancelAddressBtn.addEventListener('click', function() {
+                    addressForm.classList.add('hidden');
+                    addAddressBtn.classList.remove('hidden');
+                });
+            }
+        }
+
+        // Botões de adicionar cartão
+        const addCardBtn = document.querySelector('.btn-add-card');
+        const cardForm = document.querySelector('.card-form');
+        const cancelCardBtn = document.querySelector('.card-form .btn-cancel');
+
+        if (addCardBtn && cardForm) {
+            addCardBtn.addEventListener('click', function() {
+                cardForm.classList.remove('hidden');
+                this.classList.add('hidden');
+            });
+
+            if (cancelCardBtn) {
+                cancelCardBtn.addEventListener('click', function() {
+                    cardForm.classList.add('hidden');
+                    addCardBtn.classList.remove('hidden');
+                });
+            }
+        }
+
+        // Botões de remover favorito
+        const removeFavoriteButtons = document.querySelectorAll('.btn-remove-favorite');
+        
+        removeFavoriteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const productCard = this.closest('.product-card');
+                productCard.style.opacity = '0';
+                setTimeout(() => {
+                    productCard.remove();
+                    
+                    // Verificar se ainda existem produtos favoritos
+                    const remainingProducts = document.querySelectorAll('#favorites .product-card');
+                    if (remainingProducts.length === 0) {
+                        const favoritesContent = document.querySelector('#favorites .favorites-content');
+                        favoritesContent.innerHTML = `
+                            <div class="empty-state">
+                                <div class="empty-icon">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                                <h3>Você ainda não tem favoritos</h3>
+                                <p>Adicione produtos aos seus favoritos para encontrá-los facilmente depois.</p>
+                                <a href="produtos.html" class="btn btn-primary">Ver Produtos</a>
+                            </div>
+                        `;
+                    }
+                    
+                    showToast('Produto removido dos favoritos!', 'success');
+                }, 300);
+            });
+        });
+
+        // Mostrar/ocultar senha
+        const passwordToggles = document.querySelectorAll('.password-toggle');
+        
+        passwordToggles.forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const passwordInput = this.previousElementSibling;
+                const icon = this.querySelector('i');
+                
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    passwordInput.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        });
+
+        // Toast notification
+        function showToast(message, type) {
+            // Create toast container if it doesn't exist
+            let toastContainer = document.querySelector('.toast-container');
+            if (!toastContainer) {
+                toastContainer = document.createElement('div');
+                toastContainer.className = 'toast-container';
+                document.body.appendChild(toastContainer);
+            }
+            
+            // Create toast
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            
+            // Create toast content
+            let icon = '';
+            if (type === 'success') {
+                icon = '<i class="fas fa-check-circle"></i>';
+            } else if (type === 'error') {
+                icon = '<i class="fas fa-exclamation-circle"></i>';
+            } else if (type === 'info') {
+                icon = '<i class="fas fa-info-circle"></i>';
+            }
+            
+            toast.innerHTML = `
+                <div class="toast-icon">${icon}</div>
+                <div class="toast-content">
+                    <div class="toast-message">${message}</div>
+                </div>
+                <button class="toast-close"><i class="fas fa-times"></i></button>
+            `;
+            
+            // Add toast to container
+            toastContainer.appendChild(toast);
+            
+            // Remove toast after 3 seconds
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            }, 3000);
+            
+            // Close button
+            const closeBtn = toast.querySelector('.toast-close');
+            closeBtn.addEventListener('click', () => {
+                toast.style.opacity = '0';
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            });
+        }
+    </script>
+</body>
+</html>

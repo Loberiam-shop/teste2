@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loberiam Shop - Sua loja online com os melhores produtos e ofertas. Encontre eletrônicos, moda, casa e decoração com os melhores preços e entrega rápida.">
+    <title>Loberiam Shop - Sua melhor experiência de compra online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <!-- Barra de anúncios -->
+    <div class="top-announcement-bar">
+        <div class="container">
+            <div class="announcement-slider">
+                <div class="announcement-slide active">
+                    <span>Frete grátis para compras acima de R$ 199,90 - Aproveite!</span>
+                </div>
+                <div class="announcement-slide">
+                    <span>10% OFF na primeira compra com o cupom: BEMVINDO10</span>
+                </div>
+                <div class="announcement-slide">
+                    <span>Parcele em até 12x sem juros em todo o site</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="topo">
+        <div class="container">
+            <div class="topo-flex">
+                <div class="logo-container">
+                    <a href="index.html">
+                        <span class="logo-text">Loberiam Shop</span>
+                    </a>
+                </div>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="O que você está procurando?">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="header-icons">
+                    <a href="conta.html" class="header-icon-link">
+                        <i class="fas fa-user"></i>
+                        <span>Minha Conta</span>
+                    </a>
+                    <a href="favoritos.html" class="header-icon-link">
+                        <i class="fas fa-heart"></i>
+                        <span>Favoritos</span>
+                    </a>
+                    <a href="carrinho.html" class="header-icon-link">
+                        <div class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </div>
+                        <span>Carrinho</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-flex">
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="produtos.html">Categorias</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="produtos.html?categoria=eletronicos">Eletrônicos</a></li>
+                            <li><a href="produtos.html?categoria=moda">Moda</a></li>
+                            <li><a href="produtos.html?categoria=casa">Casa e Decoração</a></li>
+                            <li><a href="produtos.html?categoria=esportes">Esportes</a></li>
+                            <li><a href="produtos.html?categoria=beleza">Beleza e Saúde</a></li>
+                            <li><a href="produtos.html">Ver todas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="produtos.html?destaque=ofertas">Ofertas</a></li>
+                    <li><a href="produtos.html?destaque=lancamentos">Lançamentos</a></li>
+                    <li><a href="produtos.html?destaque=maisvendidos">Mais Vendidos</a></li>
+                    <li><a href="sobre.html">Quem Somos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                <a href="produtos.html?promocao=true" class="nav-promo-link">SUPER OFERTAS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Banner principal -->
+        <section class="hero-banner">
+            <div class="hero-slider">
+                <div class="hero-slide active" style="background-image: url('https://via.placeholder.com/1200x400/f8f9fa/343a40?text=Banner+Principal');">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2 class="hero-title">Ofertas Imperdíveis</h2>
+                            <p class="hero-subtitle">Até 50% de desconto em produtos selecionados</p>
+                            <a href="produtos.html?promocao=true" class="btn btn-accent">Ver Ofertas</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slide" style="background-image: url('https://via.placeholder.com/1200x400/f8f9fa/343a40?text=Banner+Secundário');">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2 class="hero-title">Novidades da Estação</h2>
+                            <p class="hero-subtitle">Confira os lançamentos que acabaram de chegar</p>
+                            <a href="produtos.html?destaque=lancamentos" class="btn btn-accent">Ver Novidades</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slide" style="background-image: url('https://via.placeholder.com/1200x400/f8f9fa/343a40?text=Banner+Terciário');">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2 class="hero-title">Tecnologia em Destaque</h2>
+                            <p class="hero-subtitle">Os melhores gadgets com preços especiais</p>
+                            <a href="produtos.html?categoria=eletronicos" class="btn btn-accent">Ver Produtos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-controls">
+                <div class="hero-dot active"></div>
+                <div class="hero-dot"></div>
+                <div class="hero-dot"></div>
+            </div>
+        </section>
+
+        <!-- Categorias em destaque -->
+        <section class="categories-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Categorias em Destaque</h2>
+                    <a href="produtos.html" class="view-all">Ver todas</a>
+                </div>
+                <div class="categories-grid">
+                    <a href="produtos.html?categoria=eletronicos" class="category-card">
+                        <div class="category-image">
+                            <img src="https://via.placeholder.com/200/f8f9fa/343a40?text=Eletrônicos" alt="Eletrônicos">
+                        </div>
+                        <div class="category-name">Eletrônicos</div>
+                    </a>
+                    <a href="produtos.html?categoria=moda" class="category-card">
+                        <div class="category-image">
+                            <img src="https://via.placeholder.com/200/f8f9fa/343a40?text=Moda" alt="Moda">
+                        </div>
+                        <div class="category-name">Moda</div>
+                    </a>
+                    <a href="produtos.html?categoria=casa" class="category-card">
+                        <div class="category-image">
+                            <img src="https://via.placeholder.com/200/f8f9fa/343a40?text=Casa" alt="Casa e Decoração">
+                        </div>
+                        <div class="category-name">Casa e Decoração</div>
+                    </a>
+                    <a href="produtos.html?categoria=esportes" class="category-card">
+                        <div class="category-image">
+                            <img src="https://via.placeholder.com/200/f8f9fa/343a40?text=Esportes" alt="Esportes">
+                        </div>
+                        <div class="category-name">Esportes</div>
+                    </a>
+                    <a href="produtos.html?categoria=beleza" class="category-card">
+                        <div class="category-image">
+                            <img src="https://via.placeholder.com/200/f8f9fa/343a40?text=Beleza" alt="Beleza e Saúde">
+                        </div>
+                        <div class="category-name">Beleza e Saúde</div>
+                    </a>
+                    <a href="produtos.html?categoria=infantil" class="category-card">
+                        <div class="category-image">
+                            <img src="https://via.placeholder.com/200/f8f9fa/343a40?text=Infantil" alt="Infantil">
+                        </div>
+                        <div class="category-name">Infantil</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ofertas em destaque -->
+        <section class="products-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Ofertas em Destaque</h2>
+                    <a href="produtos.html?destaque=ofertas" class="view-all">Ver todas</a>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300/f8f9fa/343a40?text=Produto+1" alt="Smartphone Avançado">
+                            <div class="product-badge badge-sale">-20%</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Eletrônicos</div>
+                            <h3 class="product-title">Smartphone Avançado com Câmera Profissional</h3>
+                            <div class="product-rating">
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="rating-count">(128)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-old">R$ 2.499,90</div>
+                                <div class="price-current">R$ 1.999,90</div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="produto_exemplo.html" class="btn btn-primary btn-sm">Ver Produto</a>
+                                <button class="btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300/f8f9fa/343a40?text=Produto+2" alt="Notebook Ultrafino">
+                            <div class="product-badge badge-sale">-15%</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Eletrônicos</div>
+                            <h3 class="product-title">Notebook Ultrafino com Processador de Alta Performance</h3>
+                            <div class="product-rating">
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="rating-count">(95)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-old">R$ 4.699,90</div>
+                                <div class="price-current">R$ 3.999,90</div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="produto_exemplo.html" class="btn btn-primary btn-sm">Ver Produto</a>
+                                <button class="btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300/f8f9fa/343a40?text=Produto+3" alt="Fone de Ouvido Bluetooth">
+                            <div class="product-badge badge-sale">-30%</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Eletrônicos</div>
+                            <h3 class="product-title">Fone de Ouvido Bluetooth com Cancelamento de Ruído</h3>
+                            <div class="product-rating">
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="rating-count">(210)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-old">R$ 599,90</div>
+                                <div class="price-current">R$ 419,90</div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="produto_exemplo.html" class="btn btn-primary btn-sm">Ver Produto</a>
+                                <button class="btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300/f8f9fa/343a40?text=Produto+4" alt="Smartwatch Esportivo">
+                            <div class="product-badge badge-sale">-25%</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Eletrônicos</div>
+                            <h3 class="product-title">Smartwatch Esportivo com Monitor Cardíaco</h3>
+                            <div class="product-rating">
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="rating-count">(87)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-old">R$ 899,90</div>
+                                <div class="price-current">R$ 674,90</div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="produto_exemplo.html" class="btn btn-primary btn-sm">Ver Produto</a>
+                                <button class="btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banners promocionais -->
+        <section class="banners-section">
+            <div class="container">
+                <div class="banners-grid">
+                    <div class="banner">
+                        <img src="https://via.placeholder.com/600x200/f8f9fa/343a40?text=Promoção+Especial" alt="Promoção Especial">
+                        <div class="banner-content">
+                            <h3 class="banner-title">Promoção Especial</h3>
+                            <p class="banner-subtitle">Até 40% de desconto em produtos selecionados</p>
+                            <a href="produtos.html?promocao=true" class="btn btn-accent btn-sm">Aproveitar</a>
+                        </div>
+                    </div>
+                    <div class="banner">
+                        <img src="https://via.placeholder.com/600x200/f8f9fa/343a40?text=Coleção+Nova" alt="Coleção Nova">
+                        <div class="banner-content">
+                            <h3 class="banner-title">Coleção Nova</h3>
+                            <p class="banner-subtitle">Confira os lançamentos que acabaram de chegar</p>
+                            <a href="produtos.html?destaque=lancamentos" class="btn btn-accent btn-sm">Conferir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Produtos mais vendidos -->
+        <section class="products-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Mais Vendidos</h2>
+                    <a href="produtos.html?destaque=maisvendidos" class="view-all">Ver todos</a>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300/f8f9fa/343a40?text=Produto+5" alt="Câmera Digital">
+                            <div class="product-badge badge-new">Novo</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Eletrônicos</div>
+                            <h3 class="product-title">Câmera Digital Profissional com Lente Intercambiável</h3>
+                            <div class="product-rating">
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="rating-count">(156)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-current">R$ 3.499,90</div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="produto_exemplo.html" class="btn btn-primary btn-sm">Ver Produto</a>
+                                <button class="btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300/f8f9fa/343a40?text=Produto+6" alt="Tênis Esportivo">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Esportes</div>
+                            <h3 class="product-title">Tênis Esportivo para Corrida com Amortecimento</h3>
+                            <div class="product-rating">
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="rating-count">(312)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-current">R$ 299,90</div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="produto_exemplo.html" class="btn btn-primary btn-sm">Ver Produto</a>
+                                <button class="btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300/f8f9fa/343a40?text=Produto+7" alt="Cafeteira Elétrica">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Casa e Decoração</div>
+                            <h3 class="product-title">Cafeteira Elétrica Programável com Moedor Integrado</h3>
+                            <div class="product-rating">
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="rating-count">(78)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-current">R$ 459,90</div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="produto_exemplo.html" class="btn btn-primary btn-sm">Ver Produto</a>
+                                <button class="btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300/f8f9fa/343a40?text=Produto+8" alt="Mochila para Notebook">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Moda</div>
+                            <h3 class="product-title">Mochila para Notebook com Proteção Anti-Furto</h3>
+                            <div class="product-rating">
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="rating-count">(203)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-current">R$ 189,90</div>
+                            </div>
+                            <div class="product-actions">
+                                <a href="produto_exemplo.html" class="btn btn-primary btn-sm">Ver Produto</a>
+                                <button class="btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marcas em destaque -->
+        <section class="brands-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Marcas em Destaque</h2>
+                </div>
+                <div class="brands-slider">
+                    <div class="brands-container d-flex justify-content-between align-items-center">
+                        <div class="brand-item">
+                            <img src="https://via.placeholder.com/150x80/f8f9fa/343a40?text=Marca+1" alt="Marca 1">
+                        </div>
+                        <div class="brand-item">
+                            <img src="https://via.placeholder.com/150x80/f8f9fa/343a40?text=Marca+2" alt="Marca 2">
+                        </div>
+                        <div class="brand-item">
+                            <img src="https://via.placeholder.com/150x80/f8f9fa/343a40?text=Marca+3" alt="Marca 3">
+                        </div>
+                        <div class="brand-item">
+                            <img src="https://via.placeholder.com/150x80/f8f9fa/343a40?text=Marca+4" alt="Marca 4">
+                        </div>
+                        <div class="brand-item">
+                            <img src="https://via.placeholder.com/150x80/f8f9fa/343a40?text=Marca+5" alt="Marca 5">
+                        </div>
+                        <div class="brand-item">
+                            <img src="https://via.placeholder.com/150x80/f8f9fa/343a40?text=Marca+6" alt="Marca 6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefícios -->
+        <section class="benefits-section">
+            <div class="container">
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="benefit-info">
+                            <h4>Entrega Rápida</h4>
+                            <p>Receba seus produtos em até 2 dias úteis</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="benefit-info">
+                            <h4>Compra Segura</h4>
+                            <p>Seus dados protegidos em todas as etapas</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="benefit-info">
+                            <h4>Troca Fácil</h4>
+                            <p>7 dias para trocas e devoluções</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="benefit-info">
+                            <h4>Suporte 24h</h4>
+                            <p>Atendimento online todos os dias</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+            <div class="container">
+                <h3 class="newsletter-title">Fique por dentro das novidades</h3>
+                <p class="newsletter-subtitle">Cadastre-se para receber ofertas exclusivas, lançamentos e dicas personalizadas.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Digite seu e-mail">
+                    <button type="submit" class="newsletter-button">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Institucional</h4>
+                    <div class="footer-links">
+                        <a href="sobre.html">Quem Somos</a>
+                        <a href="politicas.html">Termos e Condições</a>
+                        <a href="politicas.html">Política de Privacidade</a>
+                        <a href="politicas.html">Política de Cookies</a>
+                        <a href="politicas.html">Política de Trocas</a>
+                        <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Atendimento</h4>
+                    <div class="footer-links">
+                        <a href="contato.html">Fale Conosco</a>
+                        <a href="ajuda.html">Central de Ajuda</a>
+                        <a href="ajuda.html">Dúvidas Frequentes</a>
+                        <a href="ajuda.html">Prazos de Entrega</a>
+                        <a href="ajuda.html">Formas de Pagamento</a>
+                        <a href="ajuda.html">Como Comprar</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Minha Conta</h4>
+                    <div class="footer-links">
+                        <a href="conta.html">Meus Pedidos</a>
+                        <a href="favoritos.html">Meus Favoritos</a>
+                        <a href="conta.html">Meus Dados</a>
+                        <a href="conta.html">Meus Endereços</a>
+                        <a href="conta.html">Meus Cartões</a>
+                        <a href="conta.html">Sair</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(11) 4000-1234</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@loberiam.com.br</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Av. Paulista, 1000 - São Paulo/SP</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Seg a Sex: 9h às 18h</span>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Baixe nosso App</h4>
+                    <p>Compre pelo celular e acompanhe seus pedidos em tempo real.</p>
+                    <div class="app-buttons">
+                        <a href="#"><img src="https://via.placeholder.com/120x40/f8f9fa/343a40?text=App+Store" alt="App Store"></a>
+                        <a href="#"><img src="https://via.placeholder.com/120x40/f8f9fa/343a40?text=Google+Play" alt="Google Play"></a>
+                    </div>
+                    <h4 class="mt-4">Formas de Pagamento</h4>
+                    <div class="payment-methods">
+                        <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Visa" alt="Visa" class="payment-icon">
+                        <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Master" alt="Mastercard" class="payment-icon">
+                        <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Amex" alt="American Express" class="payment-icon">
+                        <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Elo" alt="Elo" class="payment-icon">
+                        <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Pix" alt="Pix" class="payment-icon">
+                        <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Boleto" alt="Boleto" class="payment-icon">
+                    </div>
+                    <h4 class="mt-4">Segurança</h4>
+                    <div class="security-seals">
+                        <img src="https://via.placeholder.com/60x30/ffffff/343a40?text=SSL" alt="SSL" class="security-seal">
+                        <img src="https://via.placeholder.com/60x30/ffffff/343a40?text=Seguro" alt="Site Seguro" class="security-seal">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2025 Loberiam Shop - Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Carrossel de anúncios
+        const announcementSlides = document.querySelectorAll('.announcement-slide');
+        let currentAnnouncementSlide = 0;
+
+        function showNextAnnouncementSlide() {
+            announcementSlides[currentAnnouncementSlide].classList.remove('active');
+            currentAnnouncementSlide = (currentAnnouncementSlide + 1) % announcementSlides.length;
+            announcementSlides[currentAnnouncementSlide].classList.add('active');
+        }
+
+        setInterval(showNextAnnouncementSlide, 5000);
+
+        // Carrossel principal
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        const heroDots = document.querySelectorAll('.hero-dot');
+        let currentHeroSlide = 0;
+
+        function showHeroSlide(index) {
+            heroSlides[currentHeroSlide].classList.remove('active');
+            heroDots[currentHeroSlide].classList.remove('active');
+            currentHeroSlide = index;
+            heroSlides[currentHeroSlide].classList.add('active');
+            heroDots[currentHeroSlide].classList.add('active');
+        }
+
+        function showNextHeroSlide() {
+            showHeroSlide((currentHeroSlide + 1) % heroSlides.length);
+        }
+
+        heroDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showHeroSlide(index);
+            });
+        });
+
+        setInterval(showNextHeroSlide, 7000);
+
+        // Favoritos
+        const wishlistButtons = document.querySelectorAll('.btn-wishlist');
+        
+        wishlistButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.classList.toggle('active');
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('far')) {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                } else {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

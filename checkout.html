@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loberiam Shop - Checkout. Finalize sua compra com segurança e praticidade.">
+    <title>Checkout - Loberiam Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <!-- Barra de anúncios -->
+    <div class="top-announcement-bar">
+        <div class="container">
+            <div class="announcement-slider">
+                <div class="announcement-slide active">
+                    <span>Frete grátis para compras acima de R$ 199,90 - Aproveite!</span>
+                </div>
+                <div class="announcement-slide">
+                    <span>10% OFF na primeira compra com o cupom: BEMVINDO10</span>
+                </div>
+                <div class="announcement-slide">
+                    <span>Parcele em até 12x sem juros em todo o site</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cabeçalho simplificado para checkout -->
+    <header class="topo topo-checkout">
+        <div class="container">
+            <div class="topo-flex">
+                <div class="logo-container">
+                    <a href="index.html">
+                        <span class="logo-text">Loberiam Shop</span>
+                    </a>
+                </div>
+                <div class="checkout-security">
+                    <i class="fas fa-lock"></i>
+                    <span>Ambiente Seguro</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Checkout -->
+        <section class="checkout-page">
+            <div class="container">
+                <div class="cart-steps">
+                    <div class="step completed">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Carrinho</div>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step active">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Identificação</div>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Pagamento</div>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-text">Confirmação</div>
+                    </div>
+                </div>
+
+                <div class="checkout-content">
+                    <!-- Formulário de checkout -->
+                    <div class="checkout-form">
+                        <!-- Identificação -->
+                        <div class="checkout-section">
+                            <div class="section-header">
+                                <h2>Identificação</h2>
+                            </div>
+                            <div class="section-content">
+                                <div class="login-options">
+                                    <div class="login-option active">
+                                        <input type="radio" name="login-type" id="login-existing" checked>
+                                        <label for="login-existing">Já tenho cadastro</label>
+                                    </div>
+                                    <div class="login-option">
+                                        <input type="radio" name="login-type" id="login-new">
+                                        <label for="login-new">Sou novo cliente</label>
+                                    </div>
+                                </div>
+
+                                <!-- Login existente -->
+                                <div class="login-form" id="existing-customer-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="login-email">E-mail</label>
+                                            <input type="email" id="login-email" class="form-control" placeholder="Seu e-mail">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="login-password">Senha</label>
+                                            <div class="password-input">
+                                                <input type="password" id="login-password" class="form-control" placeholder="Sua senha">
+                                                <button type="button" class="password-toggle">
+                                                    <i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <a href="#" class="forgot-password">Esqueci minha senha</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <button type="button" class="btn btn-primary btn-block">Entrar</button>
+                                    </div>
+                                </div>
+
+                                <!-- Novo cliente -->
+                                <div class="login-form hidden" id="new-customer-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="new-name">Nome completo</label>
+                                            <input type="text" id="new-name" class="form-control" placeholder="Seu nome completo">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="new-email">E-mail</label>
+                                            <input type="email" id="new-email" class="form-control" placeholder="Seu e-mail">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-6">
+                                            <label for="new-cpf">CPF</label>
+                                            <input type="text" id="new-cpf" class="form-control" placeholder="000.000.000-00">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="new-phone">Telefone</label>
+                                            <input type="text" id="new-phone" class="form-control" placeholder="(00) 00000-0000">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="new-password">Senha</label>
+                                            <div class="password-input">
+                                                <input type="password" id="new-password" class="form-control" placeholder="Crie uma senha">
+                                                <button type="button" class="password-toggle">
+                                                    <i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="new-password-confirm">Confirmar senha</label>
+                                            <div class="password-input">
+                                                <input type="password" id="new-password-confirm" class="form-control" placeholder="Confirme sua senha">
+                                                <button type="button" class="password-toggle">
+                                                    <i class="far fa-eye"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-check">
+                                            <input type="checkbox" id="terms-check" class="form-check-input">
+                                            <label for="terms-check" class="form-check-label">Li e concordo com os <a href="politicas.html" target="_blank">Termos e Condições</a> e <a href="politicas.html" target="_blank">Política de Privacidade</a></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <button type="button" class="btn btn-primary btn-block">Criar Conta e Continuar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Endereço de entrega -->
+                        <div class="checkout-section">
+                            <div class="section-header">
+                                <h2>Endereço de Entrega</h2>
+                            </div>
+                            <div class="section-content">
+                                <div class="address-options">
+                                    <div class="address-option active">
+                                        <input type="radio" name="address-type" id="address-saved" checked>
+                                        <label for="address-saved">Usar endereço salvo</label>
+                                    </div>
+                                    <div class="address-option">
+                                        <input type="radio" name="address-type" id="address-new">
+                                        <label for="address-new">Cadastrar novo endereço</label>
+                                    </div>
+                                </div>
+
+                                <!-- Endereços salvos -->
+                                <div class="saved-addresses" id="saved-addresses-form">
+                                    <div class="address-card active">
+                                        <div class="address-card-header">
+                                            <div class="address-card-title">Casa</div>
+                                            <div class="address-card-default">Principal</div>
+                                        </div>
+                                        <div class="address-card-content">
+                                            <div class="address-card-name">João Silva</div>
+                                            <div class="address-card-address">Rua das Flores, 123 - Apto 101</div>
+                                            <div class="address-card-neighborhood">Jardim Primavera</div>
+                                            <div class="address-card-city-state">São Paulo - SP</div>
+                                            <div class="address-card-zipcode">CEP: 01234-567</div>
+                                            <div class="address-card-phone">(11) 98765-4321</div>
+                                        </div>
+                                        <div class="address-card-actions">
+                                            <button type="button" class="btn btn-sm btn-outline">Editar</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="address-card">
+                                        <div class="address-card-header">
+                                            <div class="address-card-title">Trabalho</div>
+                                        </div>
+                                        <div class="address-card-content">
+                                            <div class="address-card-name">João Silva</div>
+                                            <div class="address-card-address">Av. Paulista, 1000 - Sala 1010</div>
+                                            <div class="address-card-neighborhood">Bela Vista</div>
+                                            <div class="address-card-city-state">São Paulo - SP</div>
+                                            <div class="address-card-zipcode">CEP: 01310-100</div>
+                                            <div class="address-card-phone">(11) 3456-7890</div>
+                                        </div>
+                                        <div class="address-card-actions">
+                                            <button type="button" class="btn btn-sm btn-outline">Editar</button>
+                                            <button type="button" class="btn btn-sm btn-outline btn-select">Selecionar</button>
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="btn btn-outline btn-add-address">
+                                        <i class="fas fa-plus"></i> Adicionar novo endereço
+                                    </button>
+                                </div>
+
+                                <!-- Novo endereço -->
+                                <div class="new-address hidden" id="new-address-form">
+                                    <div class="form-row">
+                                        <div class="form-group col-4">
+                                            <label for="address-zipcode">CEP</label>
+                                            <div class="zipcode-input">
+                                                <input type="text" id="address-zipcode" class="form-control" placeholder="00000-000">
+                                                <button type="button" class="zipcode-search">Buscar</button>
+                                            </div>
+                                            <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank" class="zipcode-link">Não sei meu CEP</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="address-street">Endereço</label>
+                                            <input type="text" id="address-street" class="form-control" placeholder="Rua, Avenida, etc.">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-4">
+                                            <label for="address-number">Número</label>
+                                            <input type="text" id="address-number" class="form-control" placeholder="Número">
+                                        </div>
+                                        <div class="form-group col-8">
+                                            <label for="address-complement">Complemento</label>
+                                            <input type="text" id="address-complement" class="form-control" placeholder="Apto, Bloco, etc. (opcional)">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="address-neighborhood">Bairro</label>
+                                            <input type="text" id="address-neighborhood" class="form-control" placeholder="Bairro">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-8">
+                                            <label for="address-city">Cidade</label>
+                                            <input type="text" id="address-city" class="form-control" placeholder="Cidade">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="address-state">Estado</label>
+                                            <select id="address-state" class="form-control">
+                                                <option value="">Selecione</option>
+                                                <option value="AC">AC</option>
+                                                <option value="AL">AL</option>
+                                                <option value="AP">AP</option>
+                                                <option value="AM">AM</option>
+                                                <option value="BA">BA</option>
+                                                <option value="CE">CE</option>
+                                                <option value="DF">DF</option>
+                                                <option value="ES">ES</option>
+                                                <option value="GO">GO</option>
+                                                <option value="MA">MA</option>
+                                                <option value="MT">MT</option>
+                                                <option value="MS">MS</option>
+                                                <option value="MG">MG</option>
+                                                <option value="PA">PA</option>
+                                                <option value="PB">PB</option>
+                                                <option value="PR">PR</option>
+                                                <option value="PE">PE</option>
+                                                <option value="PI">PI</option>
+                                                <option value="RJ">RJ</option>
+                                                <option value="RN">RN</option>
+                                                <option value="RS">RS</option>
+                                                <option value="RO">RO</option>
+                                                <option value="RR">RR</option>
+                                                <option value="SC">SC</option>
+                                                <option value="SP">SP</option>
+                                                <option value="SE">SE</option>
+                                                <option value="TO">TO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="address-reference">Ponto de referência</label>
+                                            <input type="text" id="address-reference" class="form-control" placeholder="Ponto de referência (opcional)">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="address-name">Nome do endereço</label>
+                                            <input type="text" id="address-name" class="form-control" placeholder="Ex: Casa, Trabalho, etc.">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-check">
+                                            <input type="checkbox" id="address-default" class="form-check-input">
+                                            <label for="address-default" class="form-check-label">Definir como endereço principal</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <button type="button" class="btn btn-primary">Salvar Endereço</button>
+                                        <button type="button" class="btn btn-outline btn-cancel">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Opções de entrega -->
+                        <div class="checkout-section">
+                            <div class="section-header">
+                                <h2>Opções de Entrega</h2>
+                            </div>
+                            <div class="section-content">
+                                <div class="shipping-options">
+                                    <div class="shipping-option">
+                                        <label class="shipping-radio">
+                                            <input type="radio" name="shipping-option" checked>
+                                            <span class="radio-custom"></span>
+                                            <div class="shipping-option-details">
+                                                <div class="shipping-option-name">Padrão</div>
+                                                <div class="shipping-option-info">Entrega em até 5 dias úteis</div>
+                                            </div>
+                                            <div class="shipping-option-price">R$ 19,90</div>
+                                        </label>
+                                    </div>
+                                    <div class="shipping-option">
+                                        <label class="shipping-radio">
+                                            <input type="radio" name="shipping-option">
+                                            <span class="radio-custom"></span>
+                                            <div class="shipping-option-details">
+                                                <div class="shipping-option-name">Expresso</div>
+                                                <div class="shipping-option-info">Entrega em até 2 dias úteis</div>
+                                            </div>
+                                            <div class="shipping-option-price">R$ 29,90</div>
+                                        </label>
+                                    </div>
+                                    <div class="shipping-option">
+                                        <label class="shipping-radio">
+                                            <input type="radio" name="shipping-option">
+                                            <span class="radio-custom"></span>
+                                            <div class="shipping-option-details">
+                                                <div class="shipping-option-name">Retirada na loja</div>
+                                                <div class="shipping-option-info">Disponível em 1 dia útil</div>
+                                            </div>
+                                            <div class="shipping-option-price">Grátis</div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="checkout-actions">
+                            <a href="carrinho.html" class="btn btn-outline">Voltar para o Carrinho</a>
+                            <a href="checkout-pagamento.html" class="btn btn-primary">Continuar para Pagamento</a>
+                        </div>
+                    </div>
+
+                    <!-- Resumo do pedido -->
+                    <div class="checkout-summary">
+                        <div class="summary-header">
+                            <h2>Resumo do Pedido</h2>
+                        </div>
+                        <div class="summary-content">
+                            <div class="summary-products">
+                                <div class="summary-product">
+                                    <div class="summary-product-image">
+                                        <img src="https://via.placeholder.com/60/f8f9fa/343a40?text=Smartphone" alt="Smartphone Avançado">
+                                    </div>
+                                    <div class="summary-product-info">
+                                        <div class="summary-product-name">Smartphone Avançado com Câmera Profissional</div>
+                                        <div class="summary-product-quantity">Qtd: 1</div>
+                                    </div>
+                                    <div class="summary-product-price">R$ 1.999,90</div>
+                                </div>
+                                <div class="summary-product">
+                                    <div class="summary-product-image">
+                                        <img src="https://via.placeholder.com/60/f8f9fa/343a40?text=Fone" alt="Fone de Ouvido Bluetooth">
+                                    </div>
+                                    <div class="summary-product-info">
+                                        <div class="summary-product-name">Fone de Ouvido Bluetooth com Cancelamento de Ruído</div>
+                                        <div class="summary-product-quantity">Qtd: 1</div>
+                                    </div>
+                                    <div class="summary-product-price">R$ 419,90</div>
+                                </div>
+                                <div class="summary-product">
+                                    <div class="summary-product-image">
+                                        <img src="https://via.placeholder.com/60/f8f9fa/343a40?text=Smartwatch" alt="Smartwatch Esportivo">
+                                    </div>
+                                    <div class="summary-product-info">
+                                        <div class="summary-product-name">Smartwatch Esportivo com Monitor Cardíaco</div>
+                                        <div class="summary-product-quantity">Qtd: 1</div>
+                                    </div>
+                                    <div class="summary-product-price">R$ 674,90</div>
+                                </div>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row">
+                                <div class="summary-label">Subtotal</div>
+                                <div class="summary-value">R$ 3.094,70</div>
+                            </div>
+                            <div class="summary-row">
+                                <div class="summary-label">Frete</div>
+                                <div class="summary-value">R$ 19,90</div>
+                            </div>
+                            <div class="summary-row">
+                                <div class="summary-label">Desconto</div>
+                                <div class="summary-value">- R$ 0,00</div>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row summary-total">
+                                <div class="summary-label">Total</div>
+                                <div class="summary-value">R$ 3.114,60</div>
+                            </div>
+                            <div class="summary-installment">
+                                Em até 12x de R$ 259,55 sem juros
+                            </div>
+                            <div class="summary-secure">
+                                <i class="fas fa-lock"></i>
+                                <span>Compra 100% segura</span>
+                            </div>
+                            <div class="summary-payment-methods">
+                                <div class="payment-methods-title">Formas de pagamento</div>
+                                <div class="payment-methods-icons">
+                                    <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Visa" alt="Visa" class="payment-icon">
+                                    <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Master" alt="Mastercard" class="payment-icon">
+                                    <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Amex" alt="American Express" class="payment-icon">
+                                    <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Elo" alt="Elo" class="payment-icon">
+                                    <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Pix" alt="Pix" class="payment-icon">
+                                    <img src="https://via.placeholder.com/40x30/ffffff/343a40?text=Boleto" alt="Boleto" class="payment-icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé simplificado para checkout -->
+    <footer class="footer footer-checkout">
+        <div class="container">
+            <div class="footer-checkout-content">
+                <div class="footer-checkout-copyright">
+                    <p>© 2025 Loberiam Shop - Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
+                </div>
+                <div class="footer-checkout-links">
+                    <a href="politicas.html">Termos e Condições</a>
+                    <a href="politicas.html">Política de Privacidade</a>
+                    <a href="ajuda.html">Ajuda</a>
+                </div>
+                <div class="footer-checkout-security">
+                    <img src="https://via.placeholder.com/60x30/ffffff/343a40?text=SSL" alt="SSL" class="security-seal">
+                    <img src="https://via.placeholder.com/60x30/ffffff/343a40?text=Seguro" alt="Site Seguro" class="security-seal">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Carrossel de anúncios
+        const announcementSlides = document.querySelectorAll('.announcement-slide');
+        let currentAnnouncementSlide = 0;
+
+        function showNextAnnouncementSlide() {
+            announcementSlides[currentAnnouncementSlide].classList.remove('active');
+            currentAnnouncementSlide = (currentAnnouncementSlide + 1) % announcementSlides.length;
+            announcementSlides[currentAnnouncementSlide].classList.add('active');
+        }
+
+        setInterval(showNextAnnouncementSlide, 5000);
+
+        // Alternar entre login existente e novo cliente
+        const loginExisting = document.getElementById('login-existing');
+        const loginNew = document.getElementById('login-new');
+        const existingCustomerForm = document.getElementById('existing-customer-form');
+        const newCustomerForm = document.getElementById('new-customer-form');
+
+        loginExisting.addEventListener('change', function() {
+            if (this.checked) {
+                existingCustomerForm.classList.remove('hidden');
+                newCustomerForm.classList.add('hidden');
+            }
+        });
+
+        loginNew.addEventListener('change', function() {
+            if (this.checked) {
+                existingCustomerForm.classList.add('hidden');
+                newCustomerForm.classList.remove('hidden');
+            }
+        });
+
+        // Alternar entre endereço salvo e novo endereço
+        const addressSaved = document.getElementById('address-saved');
+        const addressNew = document.getElementById('address-new');
+        const savedAddressesForm = document.getElementById('saved-addresses-form');
+        const newAddressForm = document.getElementById('new-address-form');
+
+        addressSaved.addEventListener('change', function() {
+            if (this.checked) {
+                savedAddressesForm.classList.remove('hidden');
+                newAddressForm.classList.add('hidden');
+            }
+        });
+
+        addressNew.addEventListener('change', function() {
+            if (this.checked) {
+                savedAddressesForm.classList.add('hidden');
+                newAddressForm.classList.remove('hidden');
+            }
+        });
+
+        // Botão de adicionar novo endereço
+        const addAddressBtn = document.querySelector('.btn-add-address');
+        addAddressBtn.addEventListener('click', function() {
+            addressNew.checked = true;
+            savedAddressesForm.classList.add('hidden');
+            newAddressForm.classList.remove('hidden');
+        });
+
+        // Botão de cancelar novo endereço
+        const cancelAddressBtn = document.querySelector('.btn-cancel');
+        cancelAddressBtn.addEventListener('click', function() {
+            addressSaved.checked = true;
+            savedAddressesForm.classList.remove('hidden');
+            newAddressForm.classList.add('hidden');
+        });
+
+        // Selecionar endereço
+        const selectAddressBtns = document.querySelectorAll('.btn-select');
+        const addressCards = document.querySelectorAll('.address-card');
+
+        selectAddressBtns.forEach((btn, index) => {
+            btn.addEventListener('click', function() {
+                addressCards.forEach(card => card.classList.remove('active'));
+                this.closest('.address-card').classList.add('active');
+            });
+        });
+
+        // Mostrar/ocultar senha
+        const passwordToggles = document.querySelectorAll('.password-toggle');
+        
+        passwordToggles.forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const passwordInput = this.previousElementSibling;
+                const icon = this.querySelector('i');
+                
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    passwordInput.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        });
+
+        // Buscar CEP
+        const zipcodeSearchBtn = document.querySelector('.zipcode-search');
+        
+        zipcodeSearchBtn.addEventListener('click', function() {
+            const zipcodeInput = document.getElementById('address-zipcode');
+            const zipcode = zipcodeInput.value.replace(/\D/g, '');
+            
+            if (zipcode.length !== 8) {
+                showToast('CEP inválido. Por favor, digite um CEP válido.', 'error');
+                return;
+            }
+            
+            // Simulação de busca de CEP
+            // Em um ambiente real, seria feita uma requisição a uma API de CEP
+            setTimeout(() => {
+                document.getElementById('address-street').value = 'Avenida Paulista';
+                document.getElementById('address-neighborhood').value = 'Bela Vista';
+                document.getElementById('address-city').value = 'São Paulo';
+                document.getElementById('address-state').value = 'SP';
+                document.getElementById('address-number').focus();
+                
+                showToast('CEP encontrado com sucesso!', 'success');
+            }, 1000);
+        });
+
+        // Toast notification
+        function showToast(message, type) {
+            // Create toast container if it doesn't exist
+            let toastContainer = document.querySelector('.toast-container');
+            if (!toastContainer) {
+                toastContainer = document.createElement('div');
+                toastContainer.className = 'toast-container';
+                document.body.appendChild(toastContainer);
+            }
+            
+            // Create toast
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            
+            // Create toast content
+            let icon = '';
+            if (type === 'success') {
+                icon = '<i class="fas fa-check-circle"></i>';
+            } else if (type === 'error') {
+                icon = '<i class="fas fa-exclamation-circle"></i>';
+            } else if (type === 'info') {
+                icon = '<i class="fas fa-info-circle"></i>';
+            }
+            
+            toast.innerHTML = `
+                <div class="toast-icon">${icon}</div>
+                <div class="toast-content">
+                    <div class="toast-message">${message}</div>
+                </div>
+                <button class="toast-close"><i class="fas fa-times"></i></button>
+            `;
+            
+            // Add toast to container
+            toastContainer.appendChild(toast);
+            
+            // Remove toast after 3 seconds
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            }, 3000);
+            
+            // Close button
+            const closeBtn = toast.querySelector('.toast-close');
+            closeBtn.addEventListener('click', () => {
+                toast.style.opacity = '0';
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            });
+        }
+    </script>
+</body>
+</html>
